@@ -4,6 +4,15 @@ A modern, responsive, and beginner-friendly social media Post Composer web appli
 
 ---
 
+## 🌐 Live Demo & Repository
+
+- 🔗 **Live Demo URL:** [https://react-post-composer.vercel.app](https://react-post-composer.vercel.app)
+- 🐙 **GitHub Repository:** [https://github.com/hrshcodes29/react-post-composer](https://github.com/hrshcodes29/react-post-composer)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhrshcodes29%2Freact-post-composer)
+
+---
+
 ## 📌 Project Overview
 
 Crafting posts for different social media networks often requires adhering to varying character limits and content layouts. **React Post Composer** streamlines this process by providing a dynamic interface where switching platforms instantly recalibrates character thresholds, updates error boundaries, and mirrors the post in an authentic live preview card.
@@ -34,6 +43,7 @@ Crafting posts for different social media networks often requires adhering to va
 - **Vanilla CSS (CSS3)** – Modern custom design system with CSS custom properties, glassmorphism, flexbox, and grid
 - **Lucide React** – Clean and consistent vector iconography
 - **Google Fonts** – *Plus Jakarta Sans* & *JetBrains Mono* for typography
+- **Vercel** – Cloud hosting and continuous deployment
 
 ---
 
@@ -60,8 +70,9 @@ react-post-composer/
 ├── .gitignore                # Git ignored patterns (node_modules, dist, etc.)
 ├── index.html                # HTML entry template with web fonts
 ├── package.json              # Project dependencies and npm scripts
+├── vercel.json               # Vercel SPA routing configuration
 ├── vite.config.js            # Vite configuration
-└── README.md                 # Complete documentation & GitHub setup guide
+└── README.md                 # Complete documentation & deployment guide
 ```
 
 ---
@@ -81,11 +92,14 @@ npm -v
 
 ### 2. Installation
 
-Clone or extract the project, navigate into the directory, and install dependencies:
+Clone the repository and install dependencies:
 
 ```bash
-# Navigate to the project directory
-cd "React Post Composer"
+# Clone the repository
+git clone https://github.com/hrshcodes29/react-post-composer.git
+
+# Navigate into the project directory
+cd react-post-composer
 
 # Install dependencies
 npm install
@@ -101,7 +115,7 @@ Start the local development server:
 npm run dev
 ```
 
-Open your browser and navigate to the displayed local URL (typically `http://localhost:5173`).
+Open your browser and navigate to `http://localhost:5173`.
 
 ---
 
@@ -117,6 +131,26 @@ To preview the production build locally:
 
 ```bash
 npm run preview
+```
+
+---
+
+## ☁️ Deployment on Vercel
+
+### Option 1: One-Click Web Deployment (Recommended)
+1. Go to **[https://vercel.com/new](https://vercel.com/new)**.
+2. Sign in with GitHub.
+3. Select **`react-post-composer`** from your repository list and click **Import**.
+4. Leave framework preset as **Vite** and root directory as `./`.
+5. Click **Deploy**. Vercel will automatically build and assign your live production URL (e.g. `https://react-post-composer.vercel.app`).
+
+### Option 2: Deploy via Vercel CLI
+```bash
+# Install and run Vercel CLI
+npx vercel
+
+# Deploy to production
+npx vercel --prod
 ```
 
 ---
@@ -142,45 +176,6 @@ Status: [Progress bar turns Red]
 
 ### 3. Platform Switching
 Switching from **Twitter** to **LinkedIn** instantly adjusts the limit from `280` to `3,000` characters, updates the placeholder, resets warning states if within range, and renders the LinkedIn preview card mockup.
-
----
-
-## 🐙 GitHub Setup & Push Instructions
-
-Follow these exact steps to push this project to your GitHub account:
-
-### Step 1: Initialize Git & Commit Files locally
-```bash
-# Initialize a new Git repository
-git init
-
-# Add all files (respecting .gitignore)
-git add .
-
-# Create initial commit
-git commit -m "feat: Initial commit for React Post Composer with Twitter and LinkedIn limits"
-```
-
-### Step 2: Create a new Repository on GitHub
-1. Go to [GitHub.com/new](https://github.com/new).
-2. Set the repository name to: **`react-post-composer`**.
-3. Choose **Public** (or **Private**).
-4. Do **not** initialize with a README, .gitignore, or license (they are already included here).
-5. Click **Create repository**.
-
-### Step 3: Link and Push to GitHub
-Replace `YOUR_GITHUB_USERNAME` with your actual GitHub username:
-
-```bash
-# Rename default branch to main
-git branch -M main
-
-# Add the remote origin
-git remote add origin https://github.com/YOUR_GITHUB_USERNAME/react-post-composer.git
-
-# Push code to GitHub
-git push -u origin main
-```
 
 ---
 
