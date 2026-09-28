@@ -6,8 +6,9 @@ A modern, responsive, and beginner-friendly social media Post Composer web appli
 
 ## 🌐 Live Demo & Repository
 
-- 🔗 **Live Demo URL:** [https://react-post-composer.vercel.app](https://react-post-composer.vercel.app)
+- 🔗 **Vercel Live Demo:** [https://react-post-composer.vercel.app](https://react-post-composer.vercel.app)
 - 🐙 **GitHub Repository:** [https://github.com/hrshcodes29/react-post-composer](https://github.com/hrshcodes29/react-post-composer)
+- 🚀 **GitHub Pages Live Demo:** [https://hrshcodes29.github.io/react-post-composer/](https://hrshcodes29.github.io/react-post-composer/)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhrshcodes29%2Freact-post-composer)
 
@@ -43,7 +44,7 @@ Crafting posts for different social media networks often requires adhering to va
 - **Vanilla CSS (CSS3)** – Modern custom design system with CSS custom properties, glassmorphism, flexbox, and grid
 - **Lucide React** – Clean and consistent vector iconography
 - **Google Fonts** – *Plus Jakarta Sans* & *JetBrains Mono* for typography
-- **Vercel** – Cloud hosting and continuous deployment
+- **Vercel & GitHub Pages** – Cloud hosting and continuous deployment
 
 ---
 
@@ -60,6 +61,9 @@ Crafting posts for different social media networks often requires adhering to va
 
 ```text
 react-post-composer/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml        # Automated GitHub Pages CI/CD workflow
 ├── public/
 │   └── vite.svg              # Application favicon & brand icon
 ├── src/
@@ -71,7 +75,7 @@ react-post-composer/
 ├── index.html                # HTML entry template with web fonts
 ├── package.json              # Project dependencies and npm scripts
 ├── vercel.json               # Vercel SPA routing configuration
-├── vite.config.js            # Vite configuration
+├── vite.config.js            # Vite configuration with relative base path
 └── README.md                 # Complete documentation & deployment guide
 ```
 
@@ -152,30 +156,6 @@ npx vercel
 # Deploy to production
 npx vercel --prod
 ```
-
----
-
-## 📸 Example Output & Behavior
-
-### 1. Normal State (Under Limit)
-```text
-Composing for Twitter
-[ Textarea: "Excited to share our new React release! 🚀" ]
-Count: 42 / 280 (238 left)
-Status: [Progress bar in vibrant Indigo]
-```
-
-### 2. Exceeded State (Over Limit)
-```text
-Composing for Twitter
-[ Textarea: "... content exceeding 280 characters ..." ]
-Count: 310 / 280 (30 over limit)
-Status: [Progress bar turns Red]
-[ Alert Banner ]: ⚠️ Character limit exceeded! Your post is 30 characters over the Twitter limit of 280 characters.
-```
-
-### 3. Platform Switching
-Switching from **Twitter** to **LinkedIn** instantly adjusts the limit from `280` to `3,000` characters, updates the placeholder, resets warning states if within range, and renders the LinkedIn preview card mockup.
 
 ---
 
